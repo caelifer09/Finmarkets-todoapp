@@ -30,9 +30,9 @@ Para el despliegue, se contemplan dos opciones: una utilizando Docker y otra sin
 Es necesario crear un archivo de variables de entorno (.env) en la raíz del proyecto con los siguientes datos:
 ```node_env
 DATABASE_URL="file:/app/prisma/dev.db?schema=public"
-PORT=3001 // puedes elegir uno
-BACKEND_PORT=3000 // puedes elegir uno
-DOCKER_HOST_IP=<IP DEL HOST> // puede ser ip de la maquina que corre docker o localhost si solo se accede desde la misma maquina.
+PORT=3001  # puedes elegir uno
+BACKEND_PORT=3000  # puedes elegir uno
+DOCKER_HOST_IP=<IP DEL HOST>  # puede ser ip de la maquina que corre docker o localhost si solo se accede desde la misma maquina.
 NEXT_PUBLIC_BACKEND_URL=http://${DOCKER_HOST_IP}:${BACKEND_PORT} 
 ```
 **Linux:**
@@ -58,9 +58,9 @@ Es necesario crear un archivo de variables de entorno (.env) en la raíz del pro
 
 ```node_env
 DATABASE_URL="file:/taskmanager/prisma/dev.db?schema=public"
-PORT=3001 // puedes elegir uno
-BACKEND_PORT=3000 // puedes elegir uno
-DOCKER_HOST_IP=<IP DEL HOST> // puede ser ip de la maquina que ejecuta el script o localhost solo si se accedera desde la misma maquina.
+PORT=3001  # puedes elegir uno
+BACKEND_PORT=3000  # puedes elegir uno
+DOCKER_HOST_IP=<IP DEL HOST>  # puede ser ip de la maquina que ejecuta el script o localhost solo si se accedera desde la misma maquina.
 NEXT_PUBLIC_BACKEND_URL=http://${DOCKER_HOST_IP}:${BACKEND_PORT}
 ```
 Luego ejecutamos estos comando en la raiz (/FinmarketsTest)
