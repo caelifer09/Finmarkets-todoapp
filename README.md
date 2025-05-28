@@ -2,7 +2,7 @@
 
 Desarrollé una aplicación utilizando [ExpressJS](https://expressjs.com/es/) para el Backend, y [Next.js](https://nextjs.org/) para el Frontend, como parte de una prueba técnica para Finmarkers.
 
-El patrón utilizado para el diseño es MVC, que se encarga de organizar la distribución de las responsabilidades entre las distintas capas de la aplicación. En cuanto al frontend, elegí React debido a que me resulta cómodo y atractivo por su flexibilidad que ofrece en la creación de interfaces interactivas.
+El patrón utilizado para el diseño es MVC, que se encarga de organizar la distribución de las responsabilidades entre las distintas capas de la aplicación. En cuanto al frontend, elegí React debido a que me resulta cómodo y atractivo por la flexibilidad que ofrece en la creación de interfaces interactivas.
 
 Rutas de la api:
 
@@ -16,11 +16,11 @@ Rutas de la api:
     - DELETE Metodo
         - "/:id" Elimina una Task por su id en el params
 
-Comenzamos copiando el repositorio:
+**Comenzamos copiando el repositorio:**
 
--git clone 
+-git clone https://github.com/caelifer09/Finmarkets-todoapp.git
 
--cd FinmarketsTest
+-cd Finmarkets-todoapp
 
 ## Deployment
 
