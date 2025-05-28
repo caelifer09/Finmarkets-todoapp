@@ -1,0 +1,28 @@
+{
+  "name": "fullstack-task-manager",
+  "version": "1.0.0",
+  "description": "Aplicación de tareas full-stack con Next.js y Node.js",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && npm install --prefix taskmanager && npm install --prefix nexttask",
+    "dev:backend": "npm run dev --prefix taskmanager",
+    "dev:frontend": "npm run dev --prefix nexttask",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build:backend": "npm run build --prefix taskmanager",
+    "build:frontend": "npm run build --prefix nexttask",
+    "build-all": "npm run build:backend && npm run build:frontend",
+    "start:backend": "npm run start --prefix taskmanager",
+    "start:frontend": "npm run start --prefix nexttask",
+    "start-all": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "docker-build": "docker-compose build",
+    "docker-up": "docker-compose up",
+    "docker-up-d": "docker-compose up -d"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3"
+  }
+}
