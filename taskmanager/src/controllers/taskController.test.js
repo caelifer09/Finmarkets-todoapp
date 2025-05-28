@@ -79,7 +79,7 @@ describe('Test unitarios de Task Controller', () => {
 
             expect(prisma.task.create).not.toHaveBeenCalled();
             expect(res.status).toHaveBeenCalledWith(400);
-            expect(res.json).toHaveBeenCalledWith({ error: 'El título es obligatorio.' });
+            expect(res.json).toHaveBeenCalledWith({ error: 'El titulo es obligatorio.' });
         });
 
         it('Deberia devolver un error 400 si el titulo excede los 100 caracteres', async () => {
@@ -94,7 +94,7 @@ describe('Test unitarios de Task Controller', () => {
 
             expect(prisma.task.create).not.toHaveBeenCalled();
             expect(res.status).toHaveBeenCalledWith(400);
-            expect(res.json).toHaveBeenCalledWith({ error: 'El título no puede exceder los 100 caracteres.' });
+            expect(res.json).toHaveBeenCalledWith({ error: 'El titulo no puede exceder los 100 caracteres.' });
         });
 
         it('Deberia devolver un error 400 si la descripcion excede los 500 caracteres', async () => {
@@ -235,7 +235,7 @@ describe('Test unitarios de Task Controller', () => {
             });
             expect(res.status).toHaveBeenCalledWith(200);
             expect(res.json).toHaveBeenCalledWith(updatedTask);
-            expect(mockIoInstance.emit).toHaveBeenCalledWith('taskUpdated', { id: updatedTask.id, status: updatedTask.status });
+            expect(mockIoInstance.emit).toHaveBeenCalledWith('taskUpdated', updatedTask);
         });
 
         it('Deberia devolver error 400 si falta el estado', async () => {
@@ -249,7 +249,7 @@ describe('Test unitarios de Task Controller', () => {
 
             expect(prisma.task.update).not.toHaveBeenCalled();
             expect(res.status).toHaveBeenCalledWith(400);
-            expect(res.json).toHaveBeenCalledWith({ error: 'El estado es obligatorio.' });
+            expect(res.json).toHaveBeenCalledWith({ error: 'El estado(status) es obligatorio.' });
         });
 
         it('Debe gestionar errores durante la actualización del estado de la tarea', async () => {
