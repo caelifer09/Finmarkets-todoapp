@@ -63,7 +63,7 @@ BACKEND_PORT=3000  # puedes elegir uno
 DOCKER_HOST_IP=<IP DEL HOST>  # puede ser ip de la maquina que ejecuta el script o localhost solo si se accedera desde la misma maquina.
 NEXT_PUBLIC_BACKEND_URL=http://${DOCKER_HOST_IP}:${BACKEND_PORT}
 ```
-Luego ejecutamos estos comando en la raiz (/FinmarketsTest)
+Luego ejecutamos estos comando en la raiz (/Finmarkets-todoapp), puede que necesites **sudo** en Linux:
 ```bash
 npm run install-all
 npx prisma generate --schema=taskmanager/prisma/schema.prisma
